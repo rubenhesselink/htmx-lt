@@ -4,10 +4,13 @@
 
 .success {
     color: green;
-    transition: all ease-in 500ms;
+    transition: all ease-in .5s;
 }
 
 .error {
     color: red;
-    transition: all ease-in 500ms;
+    font-size: 2rem;
+    transform-origin: bottom left;
+    transform: rotate(360deg);
+    transition: all ease-in 2s;
 }
