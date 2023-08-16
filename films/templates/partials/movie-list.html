@@ -1,0 +1,9 @@
+{% if movies %}
+    <ul class="list-group col-4">
+        {% for movie in movies %}
+        	<li class="list-group-item">{{ movie.title }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Movie list is empty</p>
+{% endif %}

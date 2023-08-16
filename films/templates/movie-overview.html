@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="align-center col-10 offset-1">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="lead ml-0">My Movies</p>
+            <form class="d-flex align-items-center" >
+                {% csrf_token %}
+                <input class="form-control-sm mr-2" type="text" name="moviename" placeholder="Enter a movie name"/>
+                <button class="btn btn-success btn-sm" type="submit" hx-post="{% url 'add-movie' %}" hx-target="#movie-list">
+                    Add Movie
+                </button>
+            </form>
+        </div>
+
+        <hr>
+
+        <div id="movie-list">
+            {% include "partials/movie-list.html" %}
+        </div>
+    </div>
+{% endblock %}
